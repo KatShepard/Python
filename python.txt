@@ -99,4 +99,31 @@ In operator:
    True
 ‘fred’ in ‘gregarious’
    False
+(p. 74)
+.
+.
+.
+.
+.
+.
+.
+(p. 211)
+Hashing:
+Reading through a large amount of information and producing a unique “checksum” for the data.
+The same document will always have the same hash
+the document cannot be recreated from the hash alone
+any minuscule change to the document will result in a different hash
 
+The remainder of this section is a compilation of sources from online
+
+Hashing the document containing “Hello World!”:
+import hashlib
+   hasher=hashlib.md5()
+   with open(‘hello.pdf’,’rb’) as afile:
+         buf=afile.read()
+         hasher.update(buf)
+         print(hasher.hexdigest())
+
+6b1b8ea21ceb1daf1df803407434bbe3
+
+(Success!!) 
